@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASL</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+
+</head>
+<body >
+    
+    <nav class="navbar navbar-expand-lg sticky-top" style=" height: 100px;" >
+        <div class="container">
+          <a class="logo" href="#" alt="ASl">
+            <img src="{{ url_for('static', filename='images/logo.jpg') }}" width="100px" height="100px">
+             
+          </a>
+             <h4 style="font-style:initial;color: white">ASL TRANSLATOR</h4>
+          <button class="navbar-toggler" type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#main" 
+          aria-controls="main" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered" style="color: aquamarine"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="main">  
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link p-lg-3 active" aria-current="page" href="{{url_for('home')}}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link p-lg-3" href="{{url_for('index')}}">translator </a>
+              </li>
+            
+            <li class="nav-item">
+              <a class="nav-link p-lg-3" href="{{url_for('about')}}">about</a>
+            </li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+   
+       <div class="landing d-flex justify-content-center align-items-center" >
+        
+          
+         <div class="text-center " style="background: rgb(34,34,34,34);background: rgba(34,34,34,0.75);border:5px white; border-style:ridge; color: aliceblue; padding: 225px; font-family: fantasy;" >  
+         <h1 style="font-size: 50px">Test the Creativity</h1>  
+          <p class="fs-4 text-aliceblue-50">We make ASL Translation</p>
+          <a class="btn btn-primary rounded-pill main-btn" href="{{url_for('index')}}">Get started</a>
+        </div>
+           </div>
+
+     
+    
+    <div style="background-color:rgb(105, 128, 147);">
+      <p style="font-family:serif ;position: relative; left: 50% ; width: 50% ;padding-top: 10%; padding-bottom: 10%; ; ">
+        <strong> Sign language is manual communication commonly used by people who are deaf. Sign language is not universal; people who are deaf from different countries speak different sign languages. The gestures or symbols in sign language are organized in a linguistic way. Each individual gesture is called a sign. Each sign has three distinct parts: the handshape, the position of the hands, and the movement of the hands. American Sign Language (ASL) is the most commonly used sign language in the United States.
+        </strong>
+      </p>
+      
+        <video id="video" width="50%" height="50%" controls  poster="{{ url_for('static', filename='images/logo.jpg') }}" style="position:absolute;left: .1px ; top:800px">
+          <source src="{{ url_for('static', filename='images/ASL.mp4') }}" type="video/mp4">
+          <source src="ASL..ogg" type="video/ogg">
+        Your browser does not support the video tag.
+        </video>
+      
+      </div>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
